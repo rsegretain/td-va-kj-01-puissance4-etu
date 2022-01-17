@@ -17,11 +17,11 @@ export class AppComponent {
   constructor(private p4s: Puissance4Service) {
     this.board = p4s.boardObs;
     const winR4_2_7x5 = genBoard(`|   Y
-    |RYYY
-    |RYRYRYR
-    |YRYRYRY
-    |RYRYRRR
-    |-------
+                                  |RYYY
+                                  |RYRYRYR
+                                  |YRYRYRY
+                                  |RYRYRRR
+                                  |-------
     `);
     if (winR4_2_7x5.error === undefined) {
       this.message = p4s.init(winR4_2_7x5.board);
