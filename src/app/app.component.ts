@@ -28,6 +28,11 @@ export class AppComponent {
     }
   }
 
+  /**
+   * Display a board as a matrix of tokens and empty strings.
+   * @param b The board to display
+   * @returns A matrix composed of tokens and ''
+   */
   matrix(b: Board): (Token | '')[][] {
     const D = b.data;
     return Array(b.height).fill(0).map(
